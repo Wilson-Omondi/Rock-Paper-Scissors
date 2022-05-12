@@ -24,30 +24,30 @@ function computerPlay(){
 }
 
 
-function playRound
+function playRound(playerSelection, computerSelection){
+  if(playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper'){
+    return 'You WIN! Scissors beats Paper';
+  }else if(playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock'){
+    return 'You LOSE! Rock beats Scissors';
+  }else if(playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors'){
+    return 'You WIN! Rock beats Scissors!';
+  }else if(playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors'){
+    return 'You LOSE! Scissors beats Paper';
+  }else if(playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock'){
+    return 'You Win! Paper beats Rock';
+  }else if(playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper'){
+    return 'You LOSE! Paper beats Rock';
+  }else if(playerSelection.toLowerCase() == 'paper' && computerSelection == 'paper' || playerSelection.toLowerCase() == 'rock' && computerSelection == 'rock' || playerSelection.toLowerCase() == 'scissors' && computerSelection == 'scissors'){
+    return 'Draw!';
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 const computerSelection = computerPlay(); 
-
-//let playerSelection = prompt('Choose Either of Rock, Pepper or Scissors')
-
+let playerSelection = prompt('Choose Either of Rock, Pepper or Scissors')
 
 
-
+console.log(playRound(playerSelection, computerSelection));
 
 
 
