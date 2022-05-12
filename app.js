@@ -1,20 +1,4 @@
-// function game (player1, player2){
-
-//   if(player1 == 'scissors' && player2 == 'paper'){
-//     return 'Player 1 won!';
-//   }else if(player1 == 'scissors' && player2 == 'rock'){
-//     return 'Player 1 won!';
-//   }else if(player1 == 'paper' && player2 == 'paper' || player1 == 'rock' && player2 == 'rock' || player1 == 'scissors' && player2 == 'scissors'){
-//     return 'Draw!';
-//   }
-// }
-
-// console.log(game('rock', 'rock'));
-
-//const num = Math.floor(Math.random() *3);
-
-// console.log(num);
-
+//function to randomly choose between the three choices
 function computerPlay(){
   let options = ['rock', 'paper', 'scissors'];
 
@@ -23,7 +7,13 @@ function computerPlay(){
   return options[num]
 }
 
+//Assigning both player and computer choices to variables
 
+const computerSelection = computerPlay(); 
+let playerSelection = prompt('Choose Either of Rock, Pepper or Scissors')
+
+
+//The Game function
 function playRound(playerSelection, computerSelection){
   if(playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper'){
     return 'You WIN! Scissors beats Paper';
@@ -42,9 +32,6 @@ function playRound(playerSelection, computerSelection){
   }
 
 }
-
-const computerSelection = computerPlay(); 
-let playerSelection = prompt('Choose Either of Rock, Pepper or Scissors')
 
 
 console.log(playRound(playerSelection, computerSelection));
